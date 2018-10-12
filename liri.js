@@ -2,21 +2,29 @@ require("dotenv").config();
 var Spotify = require('node-spotify-api');
 
 var keys = require('./keys');
-//var spotify = new Spotify(keys.spotify);
+var request = require('request');
 
 var command = process.argv[2];
 var name = process.argv.splice(3).join(' ');
 
 if (command === "concert-this") {
-    console.log("Concert This was entered");
-    console.log("Name: " + name);
+    request("https://rest.bandsintown.com/artists/" + name + "/events?app_id=codingbootcamp", function (error, response, body) {
+        var parseBody = JSON.parse(body);
+        for (let i = 0; i < parseBody.length; i++) {
+            console.log(parseBody[i].venue.name);
+            console.log(parseBody[i].venue.city + ", " + parseBody[i].venue.country);
+            let date = parseBody[i].datetime.substring(0,10);
+            console.log(date.substring(5,7) + "-" + date.substring(8,10) + "-" + date.substring(0,4));
+            console.log("---------------");
+        }
+    });
 }
 else if (command === "spotify-this-song") {
     if (name === "") {
         name = "The Sign";
     }
     var spotify = new Spotify(keys.spotify);
-    spotify.search({type: 'track', query: name, limit: 1}, function(err, data) {
+    spotify.search({ type: 'track', query: name, limit: 1 }, function (err, data) {
         if (err) {
             return console.log('An error has occurred: ' + err);
         }
@@ -27,13 +35,20 @@ else if (command === "spotify-this-song") {
     });
 }
 else if (command === "movie-this") {
-    console.log("Movie This was entered");
     if (name === "") {
         name = "Mr. Nobody";
     }
-    console.log("Name: " + name);
+    request("http://www.omdbapi.com/?apikey=trilogy&t="+name, function (error, response, body) {
+        var parseBody = JSON.parse(body);
+        console.log("Title: " + parseBody.Title);
+        console.log("Released: " + parseBody.Released.slice(-4));
+        console.log("IMDB Rating: " + parseBody.imdbRating);
+        console.log("Languages: " + parseBody.Language);
+        console.log("Plot: " + parseBody.Plot);
+        console.log("Actors: " + parseBody.Actors);
+    })
 }
-else if (command === "do-what-it-says"){
+else if (command === "do-what-it-says") {
     console.log("Do What it says was entered");
 } else {
     console.log("Command not recognized");
