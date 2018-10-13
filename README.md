@@ -11,8 +11,8 @@ If there are issues or questions with this project, feel free to contact me at n
 Currently, all work on this project has been done by Nathan Niesel.
 ## Examples of the App Functioning
 ![concert-this](concert-this.PNG)
-![spotify-this-default](https://raw.githubusercontent.com/NateNi/liri-node-app/master/./spotify-this-default.png)
-![spotify-this](https://raw.githubusercontent.com/NateNi/liri-node-app/master/./spotify-this.png)
-![movie-this-default](https://raw.githubusercontent.com/NateNi/liri-node-app/master/./movie-this-default.png)
-![movie-this](https://raw.githubusercontent.com/NateNi/liri-node-app/master/./movie-this.png)
-![do-what-it-says](https://raw.githubusercontent.com/NateNi/liri-node-app/master/./do-what-it-says.png)
+![spotify-this-default](spotify-this-default.PNG)
+![spotify-this](spotify-this.PNG)
+![movie-this-default](movie-this-default.PNG)
+![movie-this](movie-this.PNG)
+![do-what-it-says](do-what-it-says.PNG)
