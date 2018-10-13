@@ -9,3 +9,5 @@ By typing "node liri" into the command line along with a command and search term
 If there are issues or questions with this project, feel free to contact me at nniesel90@gmail.com
 ## Who maintains and contributes to this project
 Currently, all work on this project has been done by Nathan Niesel.
+## Examples of the App Functioning
+![concert-this](https://raw.githubusercontent.com/NateNi/liri-node-app/master/to/concert-this.png)
