@@ -10,4 +10,4 @@ If there are issues or questions with this project, feel free to contact me at n
 ## Who maintains and contributes to this project
 Currently, all work on this project has been done by Nathan Niesel.
 ## Examples of the App Functioning
-![concert-this](https://raw.githubusercontent.com/NateNi/liri-node-app/master/concert-this.png)
+![concert-this](https://raw.githubusercontent.com/NateNi/liri-node-app/master/./concert-this.png)
