@@ -10,9 +10,15 @@ If there are issues or questions with this project, feel free to contact me at n
 ## Who maintains and contributes to this project
 Currently, all work on this project has been done by Nathan Niesel.
 ## Examples of the App Functioning
+### concert-this
 ![concert-this](concert-this.PNG)
+### spotify-this (Default)
 ![spotify-this-default](spotify-this-default.PNG)
+### spotify-this
 ![spotify-this](spotify-this.PNG)
+### movie-this (Default)
 ![movie-this-default](movie-this-default.PNG)
+### movie-this
 ![movie-this](movie-this.PNG)
+### do-what-it-says
 ![do-what-it-says](do-what-it-says.PNG)
