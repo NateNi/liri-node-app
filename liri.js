@@ -75,7 +75,6 @@ function runCommand(command, name) {
             console.log("Plot: " + parseBody.Plot);
             console.log("Actors: " + parseBody.Actors);
             console.log("---------------------------");
-            console.log(parseBody);
         })
     }
     else {
